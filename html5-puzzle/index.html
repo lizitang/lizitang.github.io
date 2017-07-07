@@ -39,6 +39,9 @@
                 <li><img src="" alt=""></li>
                 <li><img src="" alt=""></li>
                 <li><img src="" alt=""></li>
+                <li><img src="" alt=""></li>
+                <li><img src="" alt=""></li>
+                <li><img src="" alt=""></li>
             </ul>
         </div>
         <span class="play-time" id="timing">?</span>
@@ -137,7 +140,7 @@
                     var html = $this.html();
                     var index = $this.index() + 3;
                     var $down = $lis.eq(index);
-                    if (index < 9 && $down.size() > 0) {
+                    if (index < 12 && $down.size() > 0) {
                         $this.html($down.html());
                         $down.html(html);
                         App.check();
