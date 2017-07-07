@@ -99,7 +99,7 @@
                     var index = $this.index();
                     var html = $this.html();
                     var $prev = $this.prev();
-                    if ($.inArray(index, [0, 3, 6]) > -1 || $prev.size() <= 0) {
+                    if ($.inArray(index, [0, 3, 6,9]) > -1 || $prev.size() <= 0) {
                         return false;
                     }
                     $this.html($prev.html());
@@ -112,7 +112,7 @@
                     var index = $this.index();
                     var html = $this.html();
                     var $next = $this.next();
-                    if ($.inArray(index, [2, 5, 8]) > -1 || $next.size() <= 0) {
+                    if ($.inArray(index, [2, 5, 8,11]) > -1 || $next.size() <= 0) {
                         return false;
                     }
                     $this.html($next.html());
@@ -187,7 +187,7 @@
             init: function() {
                 $('#reset').prop('disabled', true);
                 this.resetData();
-                imgArr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+                imgArr = [1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12];
                 this.render();
             },
             render: function() {
