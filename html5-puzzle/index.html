@@ -56,6 +56,7 @@
         var $gameBox = $('#gameBox');
         var $lis = $gameBox.find('li');
         var image = new Image();
+
         var oriArr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
         var imgArr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
         var App = {
@@ -65,8 +66,8 @@
             levels: [
                 {time: "60.00", image: "shulan.jpg"},
                 {time: "40.00", image: "tuzi.jpg"},
-                {time: "30.00", image: "together.jpg"}
-                {time: "30.00", image: "yellow man.jpg"}
+                {time: "30.00", image: "together.jpg"},
+                {time: "30.00", image: "yellow_man.jpg"}
             ],
             bind: function() {
                 //阻止手机上浏览器的弹性下拉。。。
@@ -192,8 +193,10 @@
             render: function() {
                 image.onload = function() {
                     App.randomImage();
+                    
                 };
                 image.src = this.levels[this.level].image;
+                
             },
             randomImage: function(flag) {
                 flag = flag || false;
