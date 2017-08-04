@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>动态小球canvas</title>
+</head>
+<body>
+	<!-- 首先生成随机小球 -->
+	<button id="button">按钮</button>
+	<canvas id="canvas" width="500" height="500" style="border:1px solid #000"></canvas>
+	<script>
+		var canvas = document.getElementById('canvas');
+		var btn = document.getElementById("button");
+		//存储画布宽高
+		var H=300,W=500;
+		//小球数量
+		var num = 50;
+		//存储小球
+		var balls = [];
+		btn.onclick=function(){
+			history.go();
+		}
+		getBalls();
+		function getBalls(){
+			
+			if(canvas.getContext){
+				var ctx = canvas.getContext('2d');
+				for(var i=0;i<num;i++){
+					//颜色
+					var tempR = Math.floor(Math.random()*255);
+					var tempG = Math.floor(Math.random()*255);
+					var tempB = Math.floor(Math.random()*255);
+					var tempColor = 'rgb('+tempR+','+tempG+','+tempB+')';
+					var tempX = Math.floor(Math.random()*W);
+					var tempY = Math.floor(Math.random()*H);
+					var tempr = Math.floor(Math.random()*30+20);
+					var tempBall = {
+						x:tempX,
+						y:tempY,
+						r:tempr,
+						stepX:Math.floor(Math.random() * 4 -2),
+		                stepY:Math.floor(Math.random() * 4 -2),
+		                color:tempColor,
+		                disX:Math.floor(Math.random() * 3 -1),
+		                disY:Math.floor(Math.random() * 3 -1)
+					};
+					balls.push(tempBall);
+				}
+			}
+		}
+
+		function updateBalls(){
+			for(var i=0;i<balls.length;i++){
+				balls[i].stepY += balls[i].disY;
+		        balls[i].stepX += balls[i].disX;
+		        balls[i].x += balls[i].stepX;
+		        balls[i].y += balls[i].stepY;   
+			}
+		}
+
+		function renderBalls(){
+		    //重置画布高度，达到清空画布的效果
+		    canvas.height = H;    
+		    if(canvas.getContext){
+		        var cxt = canvas.getContext('2d');
+		        for(var i = 0; i < balls.length; i++){
+		            cxt.beginPath();
+		            cxt.arc(balls[i].x,balls[i].y,balls[i].r,0,2*Math.PI);
+		            cxt.fillStyle = balls[i].color;
+		            cxt.closePath();
+		            cxt.fill();   
+		        }        
+		    }
+
+		}
+
+		getBalls();
+		clearInterval(oTimer);
+		var oTimer = setInterval(function(){
+		    //更新小球运动状态
+		    updateBalls();
+		    //渲染小球
+		    renderBalls();
+		},50);
+	</script>
+</body>
+</html>
