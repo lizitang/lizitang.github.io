@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>自定义右键</title>
+	<style>
+		*{
+			margin:0;
+			padding:0;
+			list-style:none;
+		}
+		ul{
+			display: none;
+			position: fixed;
+		}
+		li{
+			width:100px;
+			height:30px;
+			background: #eee;
+			text-align:center;
+			line-height:30px;
+		}
+		li:hover{
+			color:#fff;
+			background: lightblue;
+			cursor:pointer;
+		}
+	</style>
+</head>
+<body>
+	<div id="test" style="width:500px;height:500px;border: 1px solid #000;" ></div>
+	<ul class="list">
+		<li class="in">顶部</li>
+		<li class="in">点赞</li>
+		<li class="top">评论</li>
+	</ul>
+	<script>
+		var list = document.getElementsByClassName('list')[0];
+		var test = document.getElementById("test");
+		var top = document.getElementsByClassName('top')[0];
+		/*右键菜单首先要取消浏览器自带的右键默认行为，2.显隐效果3.位置判断*/
+		//显隐
+		test.onclick=function(){
+			list.style.display = 'none';
+		}
+		test.oncontextmenu = function(e){
+			e = e||event;
+			list.style.left = e.clientX+'px';
+			list.style.top = e.clientY+'px';
+			list.style.display = 'block';
+			return false;
+			//e.preventDefault();
+		}
+		
+	</script>
+</body>
+</html>
