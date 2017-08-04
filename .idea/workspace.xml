@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="bf53c6a9-6800-4ca0-88ce-771e3fa7dc40" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/snake_game/贪吃蛇.html" afterPath="$PROJECT_DIR$/snake_game/snake_game.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/snake_game/snake_game.html" afterPath="$PROJECT_DIR$/snake_game/index.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -97,20 +97,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="lizitang.github.io" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lizitang.github.io" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lizitang.github.io" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="snake_game" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -222,7 +208,7 @@
       <workItem from="1500003347967" duration="696000" />
       <workItem from="1500007310541" duration="11000" />
       <workItem from="1501841597304" duration="423000" />
-      <workItem from="1501843536497" duration="254000" />
+      <workItem from="1501843536497" duration="328000" />
     </task>
     <task id="LOCAL-00001" summary="puzzle">
       <created>1499416245583</created>
@@ -315,11 +301,18 @@
       <option name="project" value="LOCAL" />
       <updated>1501843614178</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="snake game">
+      <created>1501843803197</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1501843803197</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3370000" />
+    <option name="totallyTimeSpent" value="3444000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="347" y="72" width="1374" height="958" extended-state="0" />
@@ -355,7 +348,8 @@
     <MESSAGE value="自定义右键菜单" />
     <MESSAGE value="贪吃蛇游戏" />
     <MESSAGE value="canvas动态小球" />
-    <option name="LAST_COMMIT_MESSAGE" value="canvas动态小球" />
+    <MESSAGE value="snake game" />
+    <option name="LAST_COMMIT_MESSAGE" value="snake game" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
